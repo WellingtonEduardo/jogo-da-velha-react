@@ -2,13 +2,15 @@
   margin: 0;
 }
 
-
-
+body{
+  position: relative;
+  height: 100vh;
+}
 
 h1 {
   font-size: 60px;
   margin: 0px;
-  color: rgb(0, 0, 0);
+  margin-top: 20px;
   font-family: 'Courier New', Courier, monospace;
   text-shadow: 1px 1px 2px rgb(255, 255, 255);
   position: relative;
@@ -16,6 +18,15 @@ h1 {
 
 
 }
+
+@media screen and (max-width:480px) {
+  h1 {
+    font-size: 40px;
+
+  }
+
+}
+
 
 #gameBoard {
   text-align: center;
@@ -32,8 +43,8 @@ h1 {
   display: grid;
   grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
   opacity: 0.5;
-  max-width: 600px;
-  max-height: 600px;
+  max-width: 500px;
+  max-height: 500px;
   width: 100vw;
   height: 100vw;
 
@@ -60,7 +71,7 @@ h1 {
   transition: all 500ms;
   margin-top: 15px;
   margin-bottom: 20px;
-  
+
 
 }
 
@@ -73,7 +84,7 @@ h1 {
 .x::after {
 
   content: "\274C";
-  font-size: 100px;
+  font-size: 80px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -83,7 +94,7 @@ h1 {
 .o::after {
 
   content: "\2B55";
-  font-size: 100px;
+  font-size: 80px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -244,7 +255,7 @@ img {
 }
 
 #gameOver {
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
   height: 100%;
@@ -259,6 +270,16 @@ img {
 h2 {
   font-size: 40px;
   text-shadow: 1px 1px 5px rgb(0, 0, 0);
+}
+
+
+
+@media screen and  (max-width: 525px) {
+  h2 {
+    font-size: 24px;
+    
+  }
+  
 }
 
 #x::after {
